@@ -1,0 +1,97 @@
+<%-include('./header.ejs')  %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center" >
+            <h2 class="text-center bg-info">Profile</h2>
+            <div class="card">
+                <img src="<%= i.url %>" alt="" width="50" style="border-radius: 30px;">
+                <div class="card-body">
+                    <h4>name: <%= n %></h4>
+                    <h4>email: <%= e %></h4>
+                    <button data-bs-toggle="modal" data-bs-target="#updateProfile" class="btn btn-primary">update profile</button>
+                    <button data-bs-toggle="modal" data-bs-target="#changePassword" class="btn btn-info">change password</button>
+                </div><!--card-body end-->
+            </div><!--card end-->
+        </div>
+        <div class="col-md-4"></div>
+    </div><!--row end-->
+
+  <!--UpdateProfile Modal start -->
+    <div class="modal fade" id="updateProfile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Profile Update</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/updateProfile" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="">Name</label>
+                    <input type="text" value="<%= n %>" name="name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="">Email</label>
+                   <input type="text" value="<%= e %>" name="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="">image</label>
+                   <input type="file" value="<%= i %>" name="image" class="form-control">
+                   <img src="<%= i.url %>" alt="" width="50">
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  <!-- UpdateProfile modal end -->
+
+    <!--Change Password Modal start -->
+    <div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Change Password</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/changePassword" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="">Old Password</label>
+                        <input type="text" name="op" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">New Password</label>
+                       <input type="password"  name="np" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Confirm Password</label>
+                       <input type="password" name="cp" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      <!-- Change Password modal end -->
+    
+</div><!--container end-->
+
+
+
+
+
+
+<%-include('./footer.ejs')  %>
