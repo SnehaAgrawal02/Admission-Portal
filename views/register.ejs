@@ -42,14 +42,16 @@
                         <!-- Heading (Register Here) -->
                         <h1 class="mb-5 text-center">Register Here</h1>
                         <% if(message.length > 0){ %>
-                            <div class="alert alert-danger">
-                                <%= message %>
-                            </div>
-                        <% } %>
+                            <div class="alert alert-success"><%= message %></div>
+                            <% } %> 
+                            <% if(msg.length > 0){ %>
+                            <div class="alert alert-danger"><%= msg %></div>
+                            <% } %>
+              
 
                         <!-- User Name -->
                         <div class="row mb-4">
-                            <div class="col-lg-2 text-center bg-secondary rounded text-light fw-light my-auto p-2">User Name</div>
+                            <div class="col-lg-2 text-center bg-dark rounded text-light fw-light my-auto p-2">User Name</div>
                             <div class="col-lg-10">
                                 <input class="form-control text-capitalize" type="text" placeholder="Enter your name" name="n" required>
                             </div>
@@ -57,7 +59,7 @@
 
                         <!-- Email -->
                         <div class="row mb-3">
-                            <div class="col-lg-2 text-center bg-secondary rounded text-light fw-light my-auto p-2">Email</div>
+                            <div class="col-lg-2 text-center bg-dark rounded text-light fw-light my-auto p-2">Email</div>
                             <div class="col-lg-10">
                                 <input class="form-control" type="email" placeholder="name@example.com" name="e" required>
                             </div>
@@ -65,7 +67,7 @@
 
                         <!-- Password -->
                         <div class="row mb-4">
-                            <div class="col-lg-2 text-center bg-secondary rounded text-light fw-light my-auto p-2">Password</div>
+                            <div class="col-lg-2 text-center bg-dark rounded text-light fw-light my-auto p-2">Password</div>
                             <div class="col-lg-10">
                                 <input class="form-control" type="password" name="p" required >
                             </div>
@@ -73,7 +75,7 @@
 
                         <!-- Confirm Password -->
                         <div class="row mb-4">
-                            <div class="col-lg-3 text-center bg-secondary rounded text-light fw-light my-auto p-2">Confirm Password</div>
+                            <div class="col-lg-3 text-center bg-dark rounded text-light fw-light my-auto p-2">Confirm Password</div>
                             <div class="col-lg-9">
                                 <input class="form-control" type="password" name="cp" required>
                             </div>
@@ -87,7 +89,7 @@
 
                         <!-- Button (Login) -->
                         <center>
-                            <button class="btn btn-primary mb-5 btn-lg" type="submit">Register</button>
+                            <button class="btn btn-dark mb-5 btn-lg" type="submit">Register</button>
                         </center>
                         
                     </form>
