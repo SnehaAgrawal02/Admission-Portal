@@ -1,13 +1,14 @@
 <%- include('../header.ejs') %>
-
-<h1 class="text-center bg-info mt-5">Display Course</h1>
+<br>
+<br>
+<h1 class="text-center text-light mt-5 text-shadow">Display Course</h1>
 <div class="container mt-5"> 
   <!-- <% if(msg.length > 0){ %>
     <div class="alert alert-success">
         <%= msg %>
     </div>
 <% } %> -->
-<table class="table table-bordered text-center">
+<table class="table table-bordered text-center carousel-shadow">
   <tr>
     <th>Id</th>
     <th>Name</th>
@@ -26,8 +27,8 @@
         <td><%=item.status%></td>
         <td><%=item.comment%></td>
         <td>
-          <a href="/courseView/<%= item._id%>" class="btn btn-primary">view</a>
-          <a href="/courseEdit/<%= item._id%>" class="btn btn-info">edit</a>
+          <a href="/courseView/<%= item._id%>" class="btn btn-success">view</a>
+          <a href="/courseEdit/<%= item._id%>" class="btn btn-warning">edit</a>
           <!-- <a href="/courseDelete/<%= item._id%>" class="btn btn-danger">delete</a> -->
         </td>
       </tr>

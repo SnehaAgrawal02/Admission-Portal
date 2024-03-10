@@ -1,40 +1,40 @@
 <%- include('../header.ejs') %>
-
-<h1 class="text-center mt-5">Edit Course</h1>
+<br><br>
+<h1 class="text-center mt-5 text-light">Edit Course</h1>
 <div class="container mt-5">
   <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
       <form action="/courseUpdate/<%=d.id %>" method="post">
         <div class="mb-3">
-          <label for="">Name</label>
+          <label for="" class="text-light">Name</label>
           <input type="text" value="<%=d.name %>" name="name" class="form-control" />
         </div>
         <div class="mb-3">
-          <label for="">Email</label>
+          <label for="" class="text-light">Email</label>
           <input type="text" value="<%=d.email %>" name="email" class="form-control" />
         </div>
         <div class="mb-3">
-          <label for="">Phone Number</label>
+          <label for="" class="text-light">Phone Number</label>
           <input type="text" value="<%= d.phone %>" name="phone" class="form-control" />
         </div>
         <div class="mb-3">
-          <label for="">Date of Birth</label>
+          <label for="" class="text-light">Date of Birth</label>
           <input type="date" value="<%= d.dob %>" name="dob" class="form-control" />
         </div>
         <div class="mb-3">
-          <label for="">Address</label>
+          <label for="" class="text-light">Address</label>
           <textarea name="address" class="form-control">
             <%= d.address %>
           </textarea>
         </div>
         <div class="mb-3">
-          <label for="">Gender</label>
+          <label for="" class="text-light">Gender</label>
           <input type="radio" name="gender" value="male" <%= d.gender=='male'?'checked':'' %>/>Male
           <input type="radio" name="gender" value="female" <%= d.gender=='female'?'checked':'' %> />Female
         </div>
         <div class="mb-3">
-          <label for="">Education</label>
+          <label for="" class="text-light">Education</label>
           <select name="education" class="form-control">
             <option value="">select education</option>
             <option value="10th" <%= d.college =='10th'?'selected':'' %>>10th</option>
@@ -42,10 +42,10 @@
           </select>
         </div>
         <div class="mb-3">
-          <label for="">Course</label>
+          <label for="" class="text-light">Course</label>
           <input type="text" name="course" value="<%=d.course %>"  readonly/>
         </div>
-        <button type="submit" class="btn btn-info">Update Course</button>
+        <button type="submit" class="btn btn-success">Update Course</button>
       </form>
     </div>
   </div>

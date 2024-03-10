@@ -1,17 +1,20 @@
 <%-include('./header.ejs')  %>
-
+<br><br><br>
+<br><br>
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4 text-center" >
-            <h2 class="text-center bg-info">Profile</h2>
-            <div class="card">
-                <img src="<%= i.url %>" alt="" width="50" style="border-radius: 30px;">
+            <h2 class="text-center bg-secondary text-light text-shadow">Profile</h2>
+            <div class="card carousel-shadow">
+              <center>
+                <img src="<%= i.url %>" class="" alt="" width="200px" style="border-radius: 30px;">
+              </center>
                 <div class="card-body">
-                    <h4>name: <%= n %></h4>
-                    <h4>email: <%= e %></h4>
-                    <button data-bs-toggle="modal" data-bs-target="#updateProfile" class="btn btn-primary">update profile</button>
-                    <button data-bs-toggle="modal" data-bs-target="#changePassword" class="btn btn-info">change password</button>
+                    <h4>Name: <%= n %></h4>
+                    <h4>Email: <%= e %></h4>
+                    <button data-bs-toggle="modal" data-bs-target="#updateProfile" class="btn btn-success">update profile</button>
+                    <button data-bs-toggle="modal" data-bs-target="#changePassword" class="btn btn-warning">change password</button>
                 </div><!--card-body end-->
             </div><!--card end-->
         </div>
