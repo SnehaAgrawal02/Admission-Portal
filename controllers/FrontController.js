@@ -142,7 +142,7 @@ class FrontController {
             html:
               "<p>Hii " +
               n +
-              ',Please click here to <a href="http://localhost:3000/verify?id=' +
+              ',Please click here to <a href="https://admission-portal-xdjv.onrender.com' +
               user_id +
               '">Verify</a>Your mail</p>.',
         })

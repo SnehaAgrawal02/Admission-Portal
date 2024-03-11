@@ -1,7 +1,11 @@
 <%-include('./header.ejs') %>
 <!-- carousel -->
 <section id="carousel">
-  <div id="myCarousel" class="carousel slide mb-3 carousel-shadow" data-bs-ride="carousel">
+  <div
+    id="myCarousel"
+    class="carousel slide mb-3 carousel-shadow"
+    data-bs-ride="carousel"
+  >
     <!-- <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                     aria-label="Slide 1" aria-current="true"></button>
@@ -141,7 +145,7 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <!-- card-1 -->
-        <div class="col ">
+        <div class="col">
           <div class="card carousel-shadow">
             <img
               class="rounded w-100"
@@ -155,7 +159,9 @@
                 B.Tech is a professional undergraduate engineering degree
               </p>
               <% if(btech){ %>
-              <a href="/course_display" class="btn btn-secondary">Course Display</a>
+              <a href="/course_display" class="btn btn-secondary"
+                >Course Display</a
+              >
               <% }else{ %>
               <button
                 type="button"
@@ -185,7 +191,9 @@
                 BCA is a three-year Bachelor's Degree in Computer Application
               </p>
               <% if(bca){ %>
-              <a href="/course_display" class="btn btn-secondary">Course Display</a>
+              <a href="/course_display" class="btn btn-secondary"
+                >Course Display</a
+              >
               <% }else{ %>
               <button
                 type="button"
@@ -216,7 +224,9 @@
                 Application
               </p>
               <% if(mca){ %>
-              <a href="/course_display" class="btn btn-secondary">Course Display</a>
+              <a href="/course_display" class="btn btn-secondary"
+                >Course Display</a
+              >
               <% }else{ %>
               <button
                 type="button"
@@ -311,7 +321,6 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        
       </div>
     </div>
   </div>
@@ -376,14 +385,13 @@
             <label for="">Course</label>
             <input type="text" name="course" value="bca" />
           </div>
-          <button type="submit" class="btn btn-info">Submit</button>
+          <button type="submit" class="btn btn-danger">Submit</button>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -448,14 +456,13 @@
             <label for="">Course</label>
             <input type="text" name="course" value="mca" />
           </div>
-          <button type="submit" class="btn btn-info">Submit</button>
+          <button type="submit" class="btn btn-danger">Submit</button>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

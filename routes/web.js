@@ -34,7 +34,6 @@ route.get("/courseDelete/:id",checkUserAuth , CourseController.courseDelete)
 
 route.get('/admin/dashboard',checkUserAuth, AdminController.dashboard)
 route.post('/update_status/:id',checkUserAuth, AdminController.updateStatus)
-
 //password
 route.post('/forgot_password',FrontController.forgotPasswordVerify)
 route.get('/reset-password',FrontController.resetPassword)
