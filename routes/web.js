@@ -4,10 +4,11 @@ const CourseController = require('../controllers/CourseController');
 const AdminController = require('../controllers/AdminController');
 const route=express.Router()
 const checkUserAuth=require('../middleware/auth')
-
+const islogin=require('../middleware/islogin')
+const adminRole = require('../middleware/adminRole');
 
 //routing
-route.get('/',FrontController.login)
+route.get('/',islogin, FrontController.login)
 route.get('/register',FrontController.register)
 route.get('/home',checkUserAuth ,FrontController.home)
 route.get('/about',checkUserAuth,FrontController.about)
@@ -32,8 +33,13 @@ route.get("/courseDelete/:id",checkUserAuth , CourseController.courseDelete)
 
 //admin Route
 
-route.get('/admin/dashboard',checkUserAuth, AdminController.dashboard)
+route.get('/admin/dashboard',checkUserAuth , adminRole('admin') ,AdminController.dashboard)
 route.post('/update_status/:id',checkUserAuth, AdminController.updateStatus)
+route.get('/admin/adminAbout',checkUserAuth, AdminController.about)
+route.get('/admin/adminContact',checkUserAuth, AdminController.contact)
+
+
+
 //password
 route.post('/forgot_password',FrontController.forgotPasswordVerify)
 route.get('/reset-password',FrontController.resetPassword)

@@ -85,7 +85,7 @@ class CourseController {
             const data=await CourseModel.findByIdAndDelete(req.params.id)
             // console.log(data)
             req.flash('success','Course is deleted successfully.');
-            res.redirect('/course_display')
+            res.redirect('/admin/dashboard')
  
         }catch(err){
             console.log(err)

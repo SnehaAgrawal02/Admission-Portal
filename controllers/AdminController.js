@@ -13,6 +13,25 @@ class AdminController{
             console.log(error)
         }
     }
+    static about=async(req,res)=>{
+        try{
+            const{name,image}=req.userData
+            res.render('admin/adminAbout',{n:name, i:image})
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+   
+    static contact=async(req,res)=>{
+        try{
+            const{name,image}=req.userData
+            res.render('admin/adminContact',{n:name,i:image})
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
     static updateStatus = async(req, res)=>{
         try{
             const{name,email,comment,status}=req.body
