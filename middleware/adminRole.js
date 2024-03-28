@@ -7,7 +7,7 @@ const authRole = (roles) => {
             req.flash('error', 'Unauthorised user please login');
             res.redirect('/');
         }
-        // next();
+        next();
     };
 };
 
